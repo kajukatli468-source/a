@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Anniversary</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Libre+Baskerville:ital@1&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #8b0000; /* cherry red */
+    color: #ff6347; /* tomato / chilly red */
+    font-family: 'Libre Baskerville', serif;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .vintage {
+    font-family: 'Playfair Display', serif;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .note {
+    font-style: italic;
+    margin: 25px 0;
+    line-height: 1.8;
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-size: 28px;
+  }
+
+  .question {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    position: relative;
+    height: 80px;
+  }
+
+  button {
+    padding: 12px 28px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+  }
+
+  #yesBtn {
+    background: #ff6347;
+    color: white;
+  }
+
+  #noBtn {
+    background: #ffb6c1;
+    color: #8b0000;
+    position: absolute;
+  }
+
+  /* Floating hearts */
+  .heart {
+    position: fixed;
+    font-size: 22px;
+    animation: float 6s linear infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    100% { transform: translateY(-10vh); opacity: 1; }
+  }
+
+  /* Popup */
+  .popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .popup-box {
+    background: #fff0f5;
+    color: #8b0000;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #8b0000;
+  }
+
+  /* Confetti */
+  .confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: red;
+    animation: blast 2s linear infinite;
+  }
+
+  @keyframes blast {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1 class="vintage">Happy Valentine’s/Anniversary Vasu babyyy💖🫀🫶🏻</h1>
+
+  <p class="note">
+    I just wanted you to know how special you are to me. Your presence makes my days brighter and my smiles easier.
+    Being with you feels calm, warm, and right.<br><br>
+    Thank you for being you kind, caring, and someone I’m really grateful for.
+    I hope we keep creating beautiful memories together ✨💐🌷🩷
+  </p>
+
+  <h2 class="vintage">Note 1 — When We First Met</h2>
+  <p class="note">
+    When I first met you, I honestly never thought you would come this close to my heart. I didn’t know that one day you’d mean so much to me, that your name would feel like comfort and your presence would feel like home. Slowly, without any warning, you became a part of my everyday thoughts, my smiles, my emotions. What began as something so simple turned into something deeply special. I didn’t plan to fall this way my heart just chose you ✨🫀🫶🏻 
+  </p>
+
+  <h2 class="vintage">Note 2 — When We Were Apart</h2>
+  <p class="note">
+    The past time was really hard for me. Living without you for six months felt like the longest, heaviest phase of my life. Every day was a struggle, and every night felt incomplete. I held myself together with memories and hope. But when I finally found you again, everything slowly started falling back into place. Your return healed parts of me I didn’t even know were broken. Having you back made everything feel lighter, warmer, and right again. With you, my heart finally found peace 💔🥺💋💗 
+  </p>
+
+  <h2 class="vintage">Note 3 — After Everything</h2>
+  <p class="note">
+    The past time was really hard for me. Living without you for six months felt like the longest, heaviest phase of my life. Every day was a struggle, and every night felt incomplete. I held myself together with memories and hope. But when I finally found you again, everything slowly started falling back into place. Your return healed parts of me I didn’t even know were broken. Having you back made everything feel lighter, warmer, and right again. With you, my heart finally found peace 💖🌈💋💐✨💌 
+  </p>
+
+  <div class="question vintage">Will you be my valentine?</div>
+
+  <div class="buttons">
+    <button id="yesBtn">Yess??</button>
+    <button id="noBtn">Noo??</button>
+  </div>
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <button class="close-btn" onclick="closePopup()">✕</button>
+    <p>Dear Vasu,</p>
+    <p>
+      We’ve been through moments of happiness, silence, distance, and healing — and yet, here we are, still choosing each other. What we share isn’t perfect, but it’s real. We learned, we waited, we struggled, and we grew.
+Even when life tested us and time felt heavy, our hearts never truly let go. Every phase taught us the value of holding on, of understanding, and of loving a little deeper.
+Today, on our third anniversary, we celebrate not just love, but patience, strength, and the bond that brought us back to each other. No matter what comes next, this journey will always be ours — and that makes it beautiful 💋🫀🫶🏻✨ 
+    </p>
+    <p>Forever us. 💫💕🥹</p>
+  </div>
+</div>
+
+<script>
+  // No button runs away
+  const noBtn = document.getElementById("noBtn");
+  noBtn.addEventListener("mouseover", () => {
+    noBtn.style.left = Math.random() * 300 + "px";
+    noBtn.style.top = Math.random() * 40 + "px";
+  });
+
+  // Yes click
+  document.getElementById("yesBtn").onclick = () => {
+    document.getElementById("popup").style.display = "flex";
+    launchConfetti();
+  };
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // Hearts
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["🩷","💗","✨","🫶🏻"][Math.floor(Math.random()*4)];
+    heart.style.left = Math.random()*100 + "vw";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+  }, 500);
+
+  // Confetti
+  function launchConfetti() {
+    for(let i=0;i<40;i++){
+      const c = document.createElement("div");
+      c.className = "confetti";
+      c.style.left = Math.random()*100 + "vw";
+      c.style.background = ["#ff0000","#ff69b4","#ffd700"][Math.floor(Math.random()*3)];
+      document.body.appendChild(c);
+      setTimeout(()=>c.remove(),2000);
+    }
+  }
+</script>
+
+</body>
+</html>
